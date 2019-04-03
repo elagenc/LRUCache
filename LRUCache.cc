@@ -27,15 +27,7 @@ public:
 
    int get( int key )
    {
-      // Todo ela
-      // !!!!!!!!!!!!!!!
-      // The ownership of an object can only be shared with another shared_ptr by 
-      // copy constructing or copy assigning its value to another shared_ptr. 
-      // Constructing a new shared_ptr using the raw underlying pointer owned 
-      // by another shared_ptr leads to undefined behavior. 
-
       // Look if value exists in hash
-      //shared_ptr< ListNodeLRU > pNode( GetFromMap(key) );
       shared_ptr<ListNodeLRU>  pNode= GetFromMap( key );
       if( !pNode )
          return -1;
